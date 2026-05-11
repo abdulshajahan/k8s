@@ -6,7 +6,7 @@ metadata:
     app: myapp
 spec:
   # modify replicas according to your case
-  replicas: 1
+  replicas: 5
   selector:
     matchLabels:
       app: l1
@@ -17,4 +17,4 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: nginx
+        image: nginx:1.16.1 #upgraded from 1.14.2

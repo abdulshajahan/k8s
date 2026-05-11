@@ -1,0 +1,23 @@
+deployment.apps/nginx-deployment
+replicaset.apps/nginx-deployment-647677fc66 
+pod/nginx-deployment-647677fc66-9m4dm   1/1     Running   0          20m
+pod/nginx-deployment-647677fc66-rk9pp   1/1     Running   0          20m
+pod/nginx-deployment-647677fc66-z9wzv
+
+nginx-deployment-647677fc66-9m4dm   1/1     Running   0          23m   192.168.104.19    node2   <none>           <none>
+nginx-deployment-647677fc66-rk9pp   1/1     Running   0          23m   192.168.166.153   node1   <none>           <none>
+nginx-deployment-647677fc66-z9wzv   1/1     Running   0          23m   192.168.104.20    node2   <none>           <none>
+
+
+kubectl get deploy,rs,pods
+NAME                               READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/nginx-deployment   3/3     3            3           27m
+
+NAME                                          DESIRED   CURRENT   READY   AGE
+replicaset.apps/nginx-deployment-647677fc66   0         0         0       27m
+replicaset.apps/nginx-deployment-8d94c585f    3         3         3       46s
+
+NAME                                   READY   STATUS    RESTARTS   AGE
+pod/nginx-deployment-8d94c585f-8zjx2   1/1     Running   0          46s
+pod/nginx-deployment-8d94c585f-hmhxd   1/1     Running   0          37s
+pod/nginx-deployment-8d94c585f-w68rr   1/1     Running   0          28s

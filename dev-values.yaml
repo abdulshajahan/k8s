@@ -1,0 +1,9 @@
+# Default values for p1.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+ns: devns
+name: devvvvv
+# This will set the replicaset count more information can be found here: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
+rc: 2
+portno: 19999
+

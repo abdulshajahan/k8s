@@ -1,0 +1,10 @@
+# Default values for p1.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+ns: prodns
+name: proddd
+# This will set the replicaset count more information can be found here: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
+rc: 4
+portno: 29999
+image: nginxdemos/hello:plain-text
+

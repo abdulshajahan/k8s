@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: "{{ .Values.ns }}"
+  name: "nginx-{{ .Values.name }}" #nginx-devvv #nginx-proddd
+  labels:
+    app: nginx
+spec:
+  replicas: {{ .Values.rc }} #"" not req for numeric
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        #image: nginx:latest #<<<nginx:1.16.1<<< #nginx:1.14.2
+        image: "{{ .Values.image }}"
+        ports:
+        - containerPort: 80
